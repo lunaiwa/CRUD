@@ -1,10 +1,9 @@
 <!--Start of Website Content-->
 <div class="index-header">
-    <h1>Athlete Appetite</h1>
-    <h2>find your next <br> ...</h2>
+    <h1>CRUD</h1>
     <body>
     <div class="typing-container">
-        <span id="text" style="font-family: 'nexa', Arial, sans-serif"></span>
+        <span id="text" style="font-family: Arial, sans-serif"></span>
     </div>
     </body>
 </div>
@@ -12,7 +11,7 @@
 <style>
 .typing-container {
     font-size: 35px;
-    font-family: "nexa", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     white-space: nowrap;
     overflow: hidden;
     padding-top:50px;
