@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/index.css">
+
+
+<!--icon here-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,0,200" />
+<html>
+    <body>
+        <!--the header section or the top part of every page-->
+        <section class="header">
+            <nav>
+                <!--the logo on the header-->
+                <h2>A . A .</h2>
+                <link rel="icon" type="image/x-icon" href="../profile/favicon.ico">
+                <div class="nav-links">
+                    <ul>
+                        <!--the links to the other pages-->
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/templates/about.html">ABOUT</a></li>
+                        <li><a href="/templates/search.html"><span class="material-symbols-outlined">
+                            search
+                            </span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </body>
+</html>
+
+<html>
+    <h1>Let's Get Cooking :</h1>
+    <div style="margin-left:35%;">
+    <ul class="list-unstyled">
+        {% for recipe in recipes %}
+            <li class="media">
+                <img src="{{recipe['image']}}" class="align-self-center mr-3" alt="..." width="15%" height="15%">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1"><a href="/recipe?id={{ recipe['id'] }}">{{ recipe['title'] }}</a></h5>
+                    {% if 'likes' not in recipe%}
+                        How many minutes for preparation? {{recipe['preparationMinutes']}} <br>
+                        How many minutes for cooking? {{recipe['cookingMinutes']}}  <br>
+                        How many likes has this recipe? {{recipe['aggregateLikes']}}  <br>
+                    {% else %}
+                        How many your ingredients? {{recipe['usedIngredientCount']}} <br>
+                        How many missed ingredients? {{recipe['missedIngredientCount']}}  <br>
+                        How many likes has this recipe? {{recipe['likes']}}  <br>
+                    {% endif %}
+                </div>
+            </li> <br>
+        {% endfor %}
+    </ul>
+    </div>
+</html>
